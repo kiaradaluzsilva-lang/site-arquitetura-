@@ -56,3 +56,31 @@ window.addEventListener("resize", () => {
     }
 
 });
+
+// ======================
+// FAQ
+// ======================
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+
+        // Fecha os outros FAQs
+        faqItems.forEach(otherItem => {
+
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+
+        });
+
+        // Abre ou fecha o clicado
+        item.classList.toggle('active');
+
+    });
+
+});
