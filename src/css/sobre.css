@@ -1,0 +1,453 @@
+
+/* ===========================
+   RESET
+=========================== */
+ 
+html{
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 90px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #010100;
+    color: #F5F5F5;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* ===========================
+   VARIÁVEIS
+=========================== */
+
+:root{
+    --background:#010100;
+    --header:rgba(5,5,5,.55);
+    --white:#F5F5F5;
+    --text:#D6D6D6;
+    --gold:#B77719;
+    --gold-hover:#CB8A28;
+    --border:rgba(255,255,255,.08);
+    --transition:.35s ease;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:min(1280px,92%);
+    margin:auto;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:var(--header);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--border);
+}
+
+#header .container{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo img{
+    width:90px;
+}
+
+.nav-list{
+    display:flex;
+    gap:70px;
+}
+
+.nav-list a{
+    font-size:.95rem;
+    letter-spacing:.18rem;
+    color:#F5F5F5;
+    position:relative;
+    transition:var(--transition);
+}
+
+.nav-list a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:var(--transition);
+}
+
+.nav-list a:hover{
+    color:white;
+}
+
+.nav-list a:hover::after{
+    width:100%;
+}
+
+#menu-button{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:2.2rem;
+    cursor:pointer;
+}
+
+/* ===========================
+   MENU MOBILE
+=========================== */
+
+#mobile-menu{
+    position: fixed;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: rgba(5, 5, 5, .95);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255,255,255,.08);
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s ease;
+    z-index: 998;
+}
+
+#mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 24px;
+}
+
+#mobile-menu a{
+    color: #F5F5F5;
+    font-size: 1rem;
+    letter-spacing: .12rem;
+}
+
+#mobile-menu.active{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================
+        SOBRE
+========================== */
+
+#about{
+    padding:170px 0 120px;
+    background:#010100;
+}
+
+#about .container{
+    max-width:1100px;
+}
+
+#about h1{
+    font-size:3.7rem;
+    font-weight:700;
+    margin-bottom:70px;
+    color:#F5F5F5;
+}
+
+.about-block{
+    max-width:950px;
+    margin-bottom:65px;
+}
+
+.about-block:last-child{
+    margin-bottom:0;
+}
+
+.about-block h2{
+    font-size:2.35rem;
+    font-weight:700;
+    color:#F5F5F5;
+    margin-bottom:22px;
+    line-height:1.2;
+}
+
+.about-block p{
+    font-size:1.12rem;
+    line-height:1.75;
+    color:#CFCFCF;
+    margin-bottom:22px;
+}
+
+.about-block p:last-child{
+    margin-bottom:0;
+}
+
+
+
+
+/* ==========================
+        VALORES
+========================== */
+
+.about-block ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+.about-block li{
+    display:flex;
+    flex-direction:column;
+}
+
+.about-block li strong{
+    color:#FFFFFF;
+    font-size:1.18rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.about-block li p{
+    margin:0;
+}
+
+
+/* ==========================
+      ENCERRAMENTO
+========================== */
+
+.closing{
+    color:#FFFFFF !important;
+    font-weight:600;
+    font-size:1.18rem;
+    max-width:900px;
+}
+
+footer{
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(6px);
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-content{
+
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 1fr 1fr 2.9fr;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.footer-brand img{
+
+    width: 165px;
+
+}
+
+.footer-social{
+
+    display:flex;
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.footer-social a{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50%;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:#B97719;
+    border-color:#B97719;
+
+}
+
+.footer-social i{
+
+    font-size:1.2rem;
+
+}
+
+.footer-contact{
+
+    color: white;
+
+    letter-spacing: .18em;
+
+    font-size: .9rem;
+
+    line-height: 1.7;
+
+}
+
+.footer-text{
+
+    color: white;
+
+    font-size: 1.55rem;
+
+    text-align: center;
+
+    line-height: 1.6;
+
+}
+
+.footer-bottom{
+
+    text-align: center;
+
+    padding: 18px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-bottom p{
+
+    color: #d8d8d8;
+
+    font-size: .9rem;
+
+}
+
+.footer-bottom span{
+
+    color: #B97719;
+
+}
+
+.footer-bottom i{
+
+    color: #B97719;
+
+    margin-right: 6px;
+
+}
+
+
+/* ==========================
+        RESPONSIVO
+========================== */
+
+@media(max-width:991px){
+
+    #about{
+        padding:145px 0 90px;
+    }
+
+    #about h1{
+        font-size:3rem;
+        margin-bottom:55px;
+    }
+
+    .about-block{
+        margin-bottom:50px;
+    }
+
+    .about-block h2{
+        font-size:2rem;
+    }
+
+    .about-block p{
+        font-size:1.05rem;
+    }
+
+}
+
+
+@media(max-width:767px){
+
+    #about{
+        padding:120px 0 70px;
+    }
+
+    #about h1{
+        font-size:2.4rem;
+        margin-bottom:40px;
+    }
+
+    .about-block{
+        margin-bottom:42px;
+    }
+
+    .about-block h2{
+        font-size:1.8rem;
+        margin-bottom:16px;
+    }
+
+    .about-block p{
+        font-size:1rem;
+        line-height:1.7;
+        margin-bottom:18px;
+    }
+
+    .about-block ul{
+        gap:20px;
+    }
+
+    .about-block li strong{
+        font-size:1.08rem;
+    }
+
+    .closing{
+        font-size:1.05rem;
+    }
+
+}

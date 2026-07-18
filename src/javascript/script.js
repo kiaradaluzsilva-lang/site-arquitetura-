@@ -21,6 +21,28 @@ menuButton.addEventListener("click", () => {
 
 });
 
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+
+    link.addEventListener('click', e => {
+
+        const target = document.querySelector(link.getAttribute('href'));
+
+        if(target){
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: 'smooth'
+
+            });
+
+        }
+
+    });
+
+});
+
 // Fecha o menu ao clicar em um link
 
 mobileLinks.forEach(link => {

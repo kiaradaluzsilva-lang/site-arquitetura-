@@ -1,15 +1,19 @@
 /* ===========================
    RESET
 =========================== */
+ 
+html{
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 90px;
+
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
 }
 
 body{
@@ -1367,6 +1371,7 @@ footer{
         justify-self: end;
 
         text-align: right;
+        font-size: 0.8rem;
 
     }
 
@@ -1387,7 +1392,7 @@ footer{
         max-width: 440px;
 
         margin-top: 10px;
-
+        
     }
 
 }
