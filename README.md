@@ -4,7 +4,7 @@ Site institucional desenvolvido para um escritório de arquitetura residencial, 
 
 <p align="center">
   <a href="https://house-company-arquitetura.kiaradaluzsilva.chatgpt.site" target="_blank">
-    <img src="https://img.shields.io/badge/VER%20PROJETO%20ONLINE-B58A28?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Ver projeto online">
+    <img src=(https://kiaradaluzsilva-lang.github.io/site-arquitetura-/index.html) alt="Ver projeto online">
   </a>
 </p>
 
